@@ -4,6 +4,7 @@
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://reactjs.org)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-339933?logo=node.js)](https://nodejs.org)
 [![JARVIS](https://img.shields.io/badge/JARVIS-Cluster-purple)](https://github.com/Turbo31150/jarvis-linux)
+[![CI](https://github.com/Turbo31150/lumen/actions/workflows/ci.yml/badge.svg)](https://github.com/Turbo31150/lumen/actions/workflows/ci.yml)
 
 > Application web React 19 conçue pour fonctionner en tandem avec le cluster IA local **JARVIS**. Elle centralise en un seul outil tout ce qu'un professionnel ou un apprenant a besoin pour travailler dans n'importe quelle langue, en temps réel.
 
