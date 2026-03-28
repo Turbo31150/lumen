@@ -209,6 +209,51 @@ Lumen is part of the **JARVIS** distributed AI cluster:
 | [browser-mcp-orchestrator](https://github.com/Turbo31150/browser-mcp-orchestrator) | Dual-Browser DevTools Orchestration |
 | [transcription-multi-langue](https://github.com/Turbo31150/transcription-multi-langue) | Lightweight Multilingual Transcription |
 
+
+## What is LUMEN?
+
+A live multilingual transcription app. Drop into a meeting in any language — LUMEN transcribes in real-time, translates to your language, and keeps a searchable history.
+
+Built with React 19 and powered by Whisper large-v3 on GPU for instant transcription in 50+ languages.
+
+## Use Cases
+
+| Use Case | How |
+|----------|-----|
+| **International meetings** | Live subtitles in your language while others speak theirs |
+| **Content creation** | Auto-transcribe podcasts, videos, interviews |
+| **Accessibility** | Real-time captions for hearing-impaired users |
+| **Research** | Transcribe lectures, then search by keyword |
+| **Language learning** | See translations side-by-side in real-time |
+
+## 5 Workspace Modes
+
+| Mode | Purpose |
+|------|---------|
+| **LIVE** | Real-time transcription as you speak/listen |
+| **TRANSLATE STUDIO** | Batch translate audio files to any language |
+| **CLUSTER** | Distribute transcription across GPU cluster for speed |
+| **OPS DECK** | Monitor system resources and transcription queue |
+| **HISTORY** | Search, export, and manage past transcriptions |
+
+## Example
+
+```
+Input:  "Bonjour, aujourd'hui nous allons parler de l'intelligence artificielle"
+Output: {
+  "original": "Bonjour, aujourd'hui nous allons parler de l'intelligence artificielle",
+  "language": "fr",
+  "translations": {
+    "en": "Hello, today we will talk about artificial intelligence",
+    "ja": "こんにちは、今日は人工知能について話します",
+    "ar": "مرحبا، سنتحدث اليوم عن الذكاء الاصطناعي"
+  },
+  "confidence": 0.97,
+  "duration": "0.8s"
+}
+```
+
+
 ---
 
 ## License
