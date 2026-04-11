@@ -12,7 +12,6 @@
   [![Whisper](https://img.shields.io/badge/Whisper-large--v3-FF6F00?style=flat-square&logo=openai&logoColor=white)](https://github.com/openai/whisper)
   [![TailwindCSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
   [![WebSocket](https://img.shields.io/badge/WebSocket-Real--time-010101?style=flat-square&logo=socketdotio&logoColor=white)](#)
-  [![Piper TTS](https://img.shields.io/badge/Piper-TTS-4CAF50?style=flat-square)](#)
   [![Languages](https://img.shields.io/badge/Languages-50+-FF9800?style=flat-square)](#supported-languages)
   [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker&logoColor=white)](#)
   [![JARVIS](https://img.shields.io/badge/JARVIS-Ecosystem-8B5CF6?style=flat-square)](https://github.com/Turbo31150/jarvis-linux)
@@ -26,15 +25,15 @@
 
 ---
 
-## Overview
+## 🌟 Overview
 
 **Lumen** bridges the gap between humans and languages. It captures your microphone input, transcribes it live with Whisper large-v3, translates it across 50+ languages in real-time, applies contextual grammar corrections, and speaks the result back &mdash; all in a single responsive interface.
 
-Built for the **JARVIS** cluster, it leverages local AI inference for privacy and speed.
+Built for the **JARVIS** cluster, it leverages local AI inference for privacy and speed. Drop into a meeting in any language — LUMEN transcribes in real-time, translates to your language, and keeps a searchable history.
 
 ---
 
-## Pipeline
+## 🏗️ Pipeline Architecture
 
 ```mermaid
 flowchart LR
@@ -56,7 +55,7 @@ flowchart LR
 
 ---
 
-## Workspace Modes
+## 🖥️ Workspace Modes
 
 Lumen ships with **5 specialized workspace modes**, each tailored to a different workflow:
 
@@ -64,13 +63,13 @@ Lumen ships with **5 specialized workspace modes**, each tailored to a different
 |:-----|:------------|:---------|
 | **LIVE** | Real-time mic transcription with instant display | Meetings, lectures, live captioning |
 | **TRANSLATE STUDIO** | Side-by-side source/target with multi-language output | Document translation, language learning |
-| **CLUSTER** | JARVIS cluster node monitoring with AI model status | Infrastructure oversight, GPU utilization |
+| **CLUSTER** | JARVIS cluster node monitoring with AI model status | Distribute transcription across GPU cluster |
 | **OPS DECK** | System operations dashboard with health metrics | DevOps monitoring, service management |
 | **HISTORY** | Searchable archive of all past transcription sessions | Review, export, audit trail |
 
 ---
 
-## Features
+## ✨ Features
 
 | Feature | Description | Tech |
 |---------|-------------|------|
@@ -85,7 +84,7 @@ Lumen ships with **5 specialized workspace modes**, each tailored to a different
 
 ---
 
-## Tech Stack
+## ⚙️ Tech Stack
 
 ```mermaid
 block-beta
@@ -109,16 +108,9 @@ block-beta
     style infra fill:#0f172a,stroke:#8b5cf6,color:#e2e8f0
 ```
 
-| Layer | Technologies |
-|:------|:-------------|
-| **Frontend** | React 19, Vite 7, TypeScript 5, TailwindCSS 3 |
-| **Transport** | WebSocket (bidirectional audio/text), REST API, Express |
-| **AI Layer** | Whisper large-v3 (CUDA), Translation models, Piper TTS |
-| **Infrastructure** | Docker Compose, JARVIS cluster integration |
-
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
 ### With Docker (recommended)
 
@@ -143,32 +135,26 @@ npm run dev
 
 ---
 
-## Supported Languages
+## 🌍 Supported Languages
 
 Lumen supports **50+ languages** for transcription and translation via Whisper large-v3:
 
-| Language | Code | Transcription | Translation | TTS |
-|----------|------|:---:|:---:|:---:|
-| French | `fr` | Yes | Yes | Yes |
-| English | `en` | Yes | Yes | Yes |
-| Spanish | `es` | Yes | Yes | Yes |
-| German | `de` | Yes | Yes | Yes |
-| Italian | `it` | Yes | Yes | Yes |
-| Portuguese | `pt` | Yes | Yes | Yes |
-| Japanese | `ja` | Yes | Yes | Yes |
-| Chinese | `zh` | Yes | Yes | Yes |
-| Arabic | `ar` | Yes | Yes | Yes |
-| Russian | `ru` | Yes | Yes | Yes |
-| Korean | `ko` | Yes | Yes | Yes |
-| Hindi | `hi` | Yes | Yes | Yes |
-| Turkish | `tr` | Yes | Yes | Yes |
-| Dutch | `nl` | Yes | Yes | Yes |
-| Polish | `pl` | Yes | Yes | Yes |
-| + 35 more | ... | Yes | Yes | Partial |
+| Language | Code | Transcription | Translation | TTS | Latency | WER |
+|----------|------|:---:|:---:|:---:|---------|-----|
+| French | `fr` | Yes | Yes | Yes | 150ms | 2.1% |
+| English | `en` | Yes | Yes | Yes | 160ms | 2.8% |
+| Spanish | `es` | Yes | Yes | Yes | 170ms | 3.9% |
+| German | `de` | Yes | Yes | Yes | 175ms | 3.4% |
+| Italian | `it` | Yes | Yes | Yes | 170ms | 3.6% |
+| Japanese | `ja` | Yes | Yes | Yes | 210ms | 5.2% |
+| Chinese | `zh` | Yes | Yes | Yes | 220ms | 5.8% |
+| Arabic | `ar` | Yes | Yes | Yes | 240ms | 7.1% |
+| Portuguese | `pt` | Yes | Yes | Yes | 165ms | 3.1% |
+| + 40 more | ... | Yes | Yes | Partial | - | - |
 
 ---
 
-## API Reference
+## 📡 API Reference
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
@@ -182,19 +168,7 @@ Lumen supports **50+ languages** for transcription and translation via Whisper l
 
 ---
 
-## Interface
-
-The Lumen interface provides a clean, single-page experience:
-
-- **Microphone panel** &mdash; tap to record, see live waveform
-- **Transcription feed** &mdash; real-time text as you speak
-- **Translation output** &mdash; select target language, see instant results
-- **Grammar overlay** &mdash; corrections highlighted inline
-- **Audio playback** &mdash; listen to the translated/corrected output
-
----
-
-## JARVIS Ecosystem
+## 🌌 JARVIS Ecosystem
 
 Lumen is part of the **JARVIS** distributed AI cluster:
 
@@ -204,161 +178,7 @@ Lumen is part of the **JARVIS** distributed AI cluster:
 | [TradeOracle](https://github.com/Turbo31150/TradeOracle) | Autonomous Crypto Trading Agent |
 | **lumen** | Multilingual Live AI Web App *(this repo)* |
 | [jarvis-whisper-flow](https://github.com/Turbo31150/jarvis-whisper-flow) | Real-time CUDA Voice Pipeline |
-| [gemini-live-trading-agent](https://github.com/Turbo31150/gemini-live-trading-agent) | Voice Trading Assistant |
-| [gemini-creative-storyteller](https://github.com/Turbo31150/gemini-creative-storyteller) | Interactive AI Storyteller |
-| [browser-mcp-orchestrator](https://github.com/Turbo31150/browser-mcp-orchestrator) | Dual-Browser DevTools Orchestration |
-| [transcription-multi-langue](https://github.com/Turbo31150/transcription-multi-langue) | Lightweight Multilingual Transcription |
 
-
-## What is LUMEN?
-
-A live multilingual transcription app. Drop into a meeting in any language — LUMEN transcribes in real-time, translates to your language, and keeps a searchable history.
-
-Built with React 19 and powered by Whisper large-v3 on GPU for instant transcription in 50+ languages.
-
-## Use Cases
-
-| Use Case | How |
-|----------|-----|
-| **International meetings** | Live subtitles in your language while others speak theirs |
-| **Content creation** | Auto-transcribe podcasts, videos, interviews |
-| **Accessibility** | Real-time captions for hearing-impaired users |
-| **Research** | Transcribe lectures, then search by keyword |
-| **Language learning** | See translations side-by-side in real-time |
-
-## 5 Workspace Modes
-
-| Mode | Purpose |
-|------|---------|
-| **LIVE** | Real-time transcription as you speak/listen |
-| **TRANSLATE STUDIO** | Batch translate audio files to any language |
-| **CLUSTER** | Distribute transcription across GPU cluster for speed |
-| **OPS DECK** | Monitor system resources and transcription queue |
-| **HISTORY** | Search, export, and manage past transcriptions |
-
-## Example
-
-```
-Input:  "Bonjour, aujourd'hui nous allons parler de l'intelligence artificielle"
-Output: {
-  "original": "Bonjour, aujourd'hui nous allons parler de l'intelligence artificielle",
-  "language": "fr",
-  "translations": {
-    "en": "Hello, today we will talk about artificial intelligence",
-    "ja": "こんにちは、今日は人工知能について話します",
-    "ar": "مرحبا، سنتحدث اليوم عن الذكاء الاصطناعي"
-  },
-  "confidence": 0.97,
-  "duration": "0.8s"
-}
-```
-
-
----
-
-
-
-
----
-
-## Live Transcription Demo
-
-Real output from Lumen processing a multilingual meeting:
-
-```
-╔══════════════════════════════════════════════════════════════╗
-║  LUMEN — Live Transcription                    [Recording]  ║
-╠══════════════════════════════════════════════════════════════╣
-║                                                              ║
-║  [00:00:02] 🇫🇷 French (conf: 98.2%)                        ║
-║  "Bonjour à tous, commençons la réunion."                   ║
-║                                                              ║
-║  [00:00:08] 🇬🇧 English (conf: 97.5%)                       ║
-║  "Sure, let me share the quarterly results."                ║
-║                                                              ║
-║  [00:00:15] 🇩🇪 German (conf: 96.8%)                        ║
-║  "Die Ergebnisse aus München sind sehr positiv."            ║
-║                                                              ║
-║  [00:00:22] 🇪🇸 Spanish (conf: 95.1%)                       ║
-║  "El equipo de Madrid superó las expectativas."             ║
-║                                                              ║
-║  [00:00:31] 🇯🇵 Japanese (conf: 94.3%)                      ║
-║  "東京チームの報告です。売上は前年比20%増加しました。"          ║
-║                                                              ║
-║  [00:00:45] 🇵🇹 Portuguese (conf: 96.0%)                    ║
-║  "O escritório de São Paulo também cresceu bastante."       ║
-║                                                              ║
-║  [00:00:52] 🇫🇷 French (conf: 97.8%)                        ║
-║  "Excellent. Passons aux projections pour le prochain       ║
-║   trimestre."                                                ║
-║                                                              ║
-╚══════════════════════════════════════════════════════════════╝
-
-Processing stats:
-  Model: whisper-large-v3 on GTX 1660S
-  Latency: 180ms avg (real-time factor: 0.12x)
-  Languages detected: 6 in this session
-  Word accuracy: 96.4% (verified against reference)
-```
-
-### Performance by Language
-
-| Language | Confidence | WER (Word Error Rate) | Latency | Notes |
-|----------|-----------|----------------------|---------|-------|
-| French | 98.2% | 2.1% | 150ms | Best performance (native training data) |
-| English | 97.5% | 2.8% | 160ms | Excellent across accents |
-| German | 96.8% | 3.4% | 175ms | Strong with compound words |
-| Spanish | 95.1% | 3.9% | 170ms | Handles fast speech well |
-| Japanese | 94.3% | 5.2% | 210ms | Kanji output accurate |
-| Portuguese | 96.0% | 3.1% | 165ms | BR and PT variants |
-| Mandarin | 93.8% | 5.8% | 220ms | Tone-aware |
-| Arabic | 91.2% | 7.1% | 240ms | RTL output supported |
-
-### Quick Start Guide
-
-```bash
-# 1. Install
-git clone https://github.com/Turbo31150/lumen
-cd lumen && pip install -r requirements.txt
-
-# 2. Start transcription — default microphone
-python3 lumen.py --mode live
-# → Listening on default mic... (Ctrl+C to stop)
-
-# 3. File transcription
-python3 lumen.py --mode file --input meeting.mp3
-# → Transcribing meeting.mp3 (duration: 45:12)
-# → Output saved to meeting_transcript.json
-
-# 4. Workspace modes
-python3 lumen.py --mode workspace --layout split
-# Opens side-by-side: live transcript | translated output
-
-# 5. Multi-speaker diarization
-python3 lumen.py --mode live --diarize
-# → [Speaker 1] "Let's start the meeting..."
-# → [Speaker 2] "I have the report ready..."
-```
-
-### Configuration Example
-
-```yaml
-# config.yml
-model: whisper-large-v3
-device: cuda:2          # GTX 1660S #3
-language: auto          # auto-detect (or force: "fr", "en", etc.)
-beam_size: 5
-vad_threshold: 0.35     # voice activity detection sensitivity
-output:
-  format: json          # json | txt | srt | vtt
-  timestamps: true
-  confidence: true
-  diarize: false
-```
-
-
-## License
+## 📄 License
 
 MIT (c) 2026 [Turbo31150](https://github.com/Turbo31150) &mdash; Franck Delmas
-
-> Freelance profile: [codeur.com/-6666zlkh](https://www.codeur.com/-6666zlkh)
